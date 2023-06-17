@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "sản phẩm C update",
+      "price": "700",
+      "quantity": "2",
+      "description": "like"
+    },
+    {
+      "id": 2,
+      "name": "điện thoại 3 update",
+      "price": 2121,
+      "quantity": 12,
+      "description": "ay za"
+    },
+    {
+      "id": 3,
+      "name": "aaaaa update",
+      "price": 1213,
+      "quantity": 2,
+      "description": "aaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "name": "điện thoại 1212",
+      "price": 12121221,
+      "quantity": 12,
+      "description": "bbbb",
+      "id": 4
+    }
+  ]
+}

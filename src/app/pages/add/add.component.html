@@ -1,0 +1,31 @@
+<div class="d-flex justìy-content-between align-items-center">
+    <h2 class="my-4">thêm sản phẩm</h2>
+</div>
+<form #form="ngForm" (ngSubmit)="onHandleSubmit(form)">
+    <div class="mb-3">
+      <label for="productName" class="form-label">Tên sản phẩm</label>
+      <input type="text" class="form-control" id="productName" ngModel name="name" #name="ngModel" required minlength="3">
+      <div class="form-text text-danger" *ngIf="name.invalid && (name.touched || name.dirty)"></div>
+      <div  *ngIf="name.hasError('required')">bắt buộc phải nhập tên</div>
+      <div  *ngIf="name.hasError('minlength')">ít nhất 3 ký tự</div>
+    </div>
+    <div class="mb-3">
+      <label for="productPrice" class="form-label">Giá</label>
+      <div class="form-text text-danger" *ngIf="name.invalid && (name.touched || name.dirty)"></div>
+      <input type="number" class="form-control" id="productPrice" ngModel #price="ngModel" name="price" required>
+      <div  *ngIf="name.hasError('required')">bắt buộc phải nhập giá</div>
+    </div>
+    <div class="mb-3">
+        <label for="productPrice" class="form-label">Số lượng</label>
+        <div class="form-text text-danger" *ngIf="name.invalid && (name.touched || name.dirty)"></div>
+        <input type="number" class="form-control" id="productQuantity" ngModel #quantity="ngModel" name="quantity" required>
+        <div  *ngIf="name.hasError('required')">bắt buộc phải nhập so lượng</div>
+    </div>
+    <div class="mb-3">
+        <label for="productPrice" class="form-label">Mô tả</label>
+        <div class="form-text text-danger" *ngIf="name.invalid && (name.touched || name.dirty)"></div>
+        <input type="text" class="form-control" id="productDescription" ngModel #description="ngModel" name="description" required>
+        <div  *ngIf="name.hasError('required')">bắt buộc phải nhập mô tả</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
